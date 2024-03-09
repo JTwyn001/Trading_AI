@@ -6,11 +6,14 @@ from datetime import datetime, timedelta
 
 mt.initialize()
 
-if mt.initialize():
+if not mt.initialize():
+    print("initialize() failed, error code =", mt.last_error())
+    quit()
+else:
     print('Connected to MetaTrader5')
 
-login = 51439669
-password = 'et8eMdvJ'
+login = 51684010
+password = 'd&CISL465!tBzO'
 server = 'ICMarketsSC-Demo'
 
 mt.login(login, password, server)
